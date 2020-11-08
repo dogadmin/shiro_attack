@@ -2,10 +2,11 @@
 
 项目基于javafx,利用shiro反序列化漏洞进行回显命令执行以及注入各类内存马
 
-1. 通过deleteMe的返回检出默认key (SimplePrincipalCollection)
-2. tomcat/springboot环境下回显命令执行
+1. 检出默认key (SimplePrincipalCollection)
+2. Tomcat/Springboot 回显命令执行
 3. 集成CommonsCollectionsK1/K2
-4. 通过POST请求中执行字节码实现注入内存马（参考哥斯拉内存马Servlet实现）
+4. 通过POST请求中defineClass字节码实现注入内存马（Servlet实现参考哥斯拉内存马）
+5. resources目录下shiro_keys.txt可扩展key
 
 ## 关于内存马
 1. 某些spring环境以jar包启动写shell麻烦
